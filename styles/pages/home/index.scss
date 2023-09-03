@@ -1,0 +1,28 @@
+@import './cover';
+@import './selection';
+
+.home {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.siteby {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 419;
+
+	@include media('<tablet') {
+		bottom: 8px;
+		right: 8px;
+	}
+
+	a {
+		@extend %link;
+		min-height: 24px;
+
+		@include media('<tablet') {
+			min-height: 16px;
+		}
+	}
+}

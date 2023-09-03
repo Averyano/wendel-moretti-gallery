@@ -1,0 +1,37 @@
+# EditorConfig is a file format supported by most code editors.
+# This file specifies coding styles and preferences.
+
+# Top-most EditorConfig file
+root = true
+
+# Indentation and whitespace settings
+[*]
+indent_style = tab
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# JavaScript files
+[*.js]
+max_line_length = 80
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# JSON files
+[*.json]
+indent_size = 2
+
+# TypeScript files
+[*.ts]
+max_line_length = 80
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# CSS files
+[*.css]
+indent_size = 2
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false

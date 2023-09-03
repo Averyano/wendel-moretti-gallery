@@ -1,0 +1,46 @@
+.notfound {
+	@extend %page;
+	flex-direction: column;
+}
+
+.notfound__wrapper {
+	@extend %center;
+	background: rgb(var(--data-color-background));
+	flex-direction: column;
+	position: relative;
+}
+
+.notfound__title {
+	@extend %black-256;
+
+	@include media('<laptop') {
+		font-size: 96px;
+	}
+	color: rgb(var(--data-color-black));
+}
+.notfound__subtitle {
+	@extend %paragraph-24;
+
+	margin-top: 32px;
+	text-align: center;
+
+	color: rgb(var(--data-color-black));
+}
+.notfound__graphics {
+	position: absolute;
+
+	z-index: -1;
+
+	&__left {
+		bottom: 0;
+		left: 0;
+	}
+	&__right {
+		top: 0;
+		right: 0;
+	}
+
+	@include media('<laptop') {
+		display: none;
+	}
+}

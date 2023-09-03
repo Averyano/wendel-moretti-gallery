@@ -1,0 +1,25 @@
+$color-background: '255, 255, 255';
+$color-black: '17, 17, 17';
+$color-black-highlight: '26, 25, 25';
+$color-white: '255, 255, 255';
+$color-stone: '206, 203, 190';
+$color-stone-black: '49, 52, 65';
+$color-cyan: '130, 160, 162';
+// $color-stone: '209, 201, 194';
+
+$ease-in-out: cubic-bezier(0, 0, 0.975, 1);
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+$font-baskerville: 'Libre Baskerville', serif;
+
+$phi: 1.6180339887498948482;
+
+$z-indexes: (
+	'preloader',
+	'cookies',
+	'navigation',
+	'content-front',
+	'content',
+	'content-back',
+	'canvas'
+);

@@ -1,0 +1,99 @@
+.preloader {
+	@extend %center;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgb(var(--data-color-background));
+	z-index: z('preloader');
+	user-select: none;
+}
+.preloader__loadingbar {
+	height: 4px;
+	width: 430px;
+	margin-top: 22px;
+	border-radius: 2px;
+	background: #fff;
+	mix-blend-mode: difference;
+	z-index: z('content');
+	transform-origin: left;
+	transform: scaleX(0);
+}
+.preloader__logo__text {
+	@extend %black-256;
+
+	overflow: hidden;
+	font-size: 48px;
+	color: #fff;
+	mix-blend-mode: difference;
+
+	z-index: z('content');
+
+	& span {
+		display: inline-block;
+		// transform: translateY(200);
+	}
+	& span.spacing {
+		margin-left: 20px;
+	}
+
+	@include media('<phone') {
+		font-size: 40px;
+	}
+}
+
+.preloader__bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.preloader__bg--main {
+	background: rgb(var(--data-color-background));
+	z-index: 1;
+}
+
+.preloader__bg--overlay {
+	background: rgb(var(--data-color-black));
+	z-index: 0;
+	// transform: translateY(100%);
+}
+.preloader__bg.is-animated {
+	z-index: 0;
+}
+
+.preloader__icon {
+	position: relative;
+}
+.preloader__svg path,
+.preloader__svg rect {
+	& svg path,
+	& svg rect {
+		fill: rgb(var(--data-color-black));
+	}
+}
+.preloader__svg--overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: reveal 2s forwards infinite;
+	animation-delay: 1s;
+	clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+
+@keyframes reveal {
+	0% {
+		clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+	}
+	50% {
+		clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+	}
+	100% {
+		clip-path: polygon(100% 0, 100% 100%, 100% 100%, 100% 0);
+	}
+}

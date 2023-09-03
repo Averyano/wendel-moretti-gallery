@@ -1,0 +1,33 @@
+@import './utils/responsive';
+@import './utils/variables';
+@import './utils/functions';
+@import './utils/mixins';
+@import './utils/vendors';
+@import './utils/links';
+@import './utils/typo-mixins';
+
+@import './base/reset';
+@import './base/fonts';
+@import './base/base';
+
+@import './layout/preloader';
+@import './layout/navigation';
+@import './layout/footer';
+@import './layout/btn';
+@import './layout/circle-button';
+@import './layout/scrollbar';
+@import './layout/canvas';
+@import './layout/icons';
+@import './layout/grain';
+@import './layout/dotanim';
+@import './layout/toggleswitch';
+
+@import './shared/titles';
+@import './shared/paragraph';
+@import './shared/cookies';
+// @import './shared/lenis';
+// @import './shared/swiper';
+
+@import './pages/home';
+@import './pages/notfound';
+@import './pages/terms';

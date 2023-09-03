@@ -1,0 +1,45 @@
+- var methods = htmlWebpackPlugin.options.methods;
+- var data = htmlWebpackPlugin.options.data;
+
+doctype html
+html(lang="en")
+	// Meta is unique for each page
+	head
+		//- include ./head.pug
+			// General
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="msapplication-TileColor", content="#fff")
+		meta(name="theme-color", content="#fff")
+
+		// Icons & Styles
+		// Apple devices (iOS and Safari)
+		link(rel="apple-touch-icon", sizes="180x180", href="./icons/apple-touch-icon.png")
+
+		// Standard favicons for most browsers
+		link(rel="icon", type="image/png", sizes="32x32", href="./icons/favicon-32x32.png")
+		link(rel="icon", type="image/png", sizes="16x16", href="./icons/favicon-16x16.png")
+
+		// Progressive Web Apps and Android
+		link(rel="manifest", href="./manifest.json")
+		//- block additionalHead
+
+	body
+
+		// Loader
+		include ./components/preloader
+
+		// Navigation
+		include ./layout/navigation
+
+		include ./shared/cookies
+		// Site Content
+		.main-div
+			block content
+		.siteby 
+			span 
+				| site by 
+				a(href="https://averyano.com/" target="_blank") Averyano
+				|  © 2023
+
+	//- script(async src="https://www.googletagmanager.com/gtag/js?id=G-6H0E9Z8TSR")

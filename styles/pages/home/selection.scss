@@ -1,0 +1,139 @@
+.selection {
+	@extend %center;
+	flex-direction: column;
+	width: 100%;
+
+	position: relative;
+	z-index: z('content');
+	height: 100%;
+	min-height: 100vh;
+	padding: 100px 0px;
+	overflow: hidden;
+
+	background: rgb(var(--data-color-background));
+}
+
+.selection__wrapper {
+	@extend %center;
+	flex-direction: row;
+	height: inherit;
+	min-height: inherit;
+	width: inherit;
+
+	@include media('<tablet') {
+		flex-direction: column;
+	}
+
+	@include media('<phone') {
+		min-height: fit-content;
+	}
+}
+
+.selection__figure {
+	z-index: 0;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	min-height: 350px;
+	min-width: 600px;
+	border-radius: 4px;
+
+	overflow: hidden;
+}
+
+.selection__image--hidden {
+	display: none;
+}
+
+.selection__image {
+	width: 600px;
+	position: relative;
+	top: 0;
+	left: 0;
+	transform: scale(1.5);
+}
+.selection__image--active {
+	display: block;
+}
+.selection__item {
+	@extend %center;
+	flex-direction: column;
+	flex: 1;
+	box-sizing: border-box;
+	padding: 0 7vw;
+
+	width: 50%;
+	height: inherit;
+	min-height: inherit;
+
+	box-sizing: border-box;
+
+	@include media('<tablet') {
+		width: 100%;
+		padding: 0 20px;
+	}
+}
+// .selection__left {
+// 	width: 100%;
+// }
+.selection__right {
+	@include media('<phone') {
+		margin: 100px 0;
+	}
+}
+.selection__title {
+	@extend %extrabold-128;
+	margin: 15px;
+}
+.selection__subtitle {
+	font-size: 24px;
+}
+.selection__description {
+	@extend %paragraph-20;
+
+	max-width: 520px;
+	margin-top: 7vh;
+	text-align: justify;
+	margin-bottom: 10rem;
+	min-height: 13rem;
+
+	@include media('<laptop') {
+		margin-bottom: 6rem;
+		min-height: auto;
+	}
+
+	@include media('<tablet') {
+		margin-bottom: 4rem;
+	}
+}
+
+.selection__button {
+	@extend %center;
+	@extend %extrabold-128;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	border-radius: 20px;
+	width: 100%;
+	height: 100px;
+	max-width: 550px;
+
+	font-size: 1.4rem;
+	letter-spacing: -2px;
+	color: rgba(var(--data-color-white), 1);
+	mix-blend-mode: multiply;
+
+	z-index: 1;
+	@include media('<tablet') {
+		color: rgba(var(--data-color-white), 1);
+		font-size: 1.2rem;
+		letter-spacing: -2px;
+	}
+}
+
+.selection__button--website {
+	background: linear-gradient(343deg, #d6c9a7, #d6b3a7);
+}
+.selection__button--design {
+	background: linear-gradient(17deg, #a4c3db, #a4aedb);
+}

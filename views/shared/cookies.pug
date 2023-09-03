@@ -1,0 +1,32 @@
+.cookies
+	.cookies__wrapper 
+		.cookies__header
+			svg.cookies__icon(width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg")
+				path(d="M15.75 15C16.375 15 16.9065 14.781 17.3445 14.343C17.7825 13.905 18.001 13.374 18 12.75C18 12.125 17.781 11.5935 17.343 11.1555C16.905 10.7175 16.374 10.499 15.75 10.5C15.125 10.5 14.5935 10.719 14.1555 11.157C13.7175 11.595 13.499 12.126 13.5 12.75C13.5 13.375 13.719 13.9065 14.157 14.3445C14.595 14.7825 15.126 15.001 15.75 15ZM12.75 22.5C13.375 22.5 13.9065 22.281 14.3445 21.843C14.7825 21.405 15.001 20.874 15 20.25C15 19.625 14.781 19.0935 14.343 18.6555C13.905 18.2175 13.374 17.999 12.75 18C12.125 18 11.5935 18.219 11.1555 18.657C10.7175 19.095 10.499 19.626 10.5 20.25C10.5 20.875 10.719 21.4065 11.157 21.8445C11.595 22.2825 12.126 22.501 12.75 22.5ZM22.5 24C22.925 24 23.2815 23.856 23.5695 23.568C23.8575 23.28 24.001 22.924 24 22.5C24 22.075 23.856 21.7185 23.568 21.4305C23.28 21.1425 22.924 20.999 22.5 21C22.075 21 21.7185 21.144 21.4305 21.432C21.1425 21.72 20.999 22.076 21 22.5C21 22.925 21.144 23.2815 21.432 23.5695C21.72 23.8575 22.076 24.001 22.5 24ZM18 33C15.925 33 13.975 32.606 12.15 31.818C10.325 31.03 8.7375 29.9615 7.3875 28.6125C6.0375 27.2625 4.969 25.675 4.182 23.85C3.395 22.025 3.001 20.075 3 18C3 15.9 3.45 13.85 4.35 11.85C5.25 9.84997 6.5065 8.12497 8.1195 6.67497C9.7305 5.22497 11.642 4.16247 13.854 3.48747C16.066 2.81247 18.485 2.74997 21.111 3.29997C20.886 4.42497 20.961 5.48147 21.336 6.46947C21.711 7.45747 22.2735 8.28847 23.0235 8.96247C23.7735 9.63747 24.661 10.1 25.686 10.35C26.711 10.6 27.786 10.5375 28.911 10.1625C28.136 11.8875 28.2735 13.3625 29.3235 14.5875C30.3735 15.8125 31.574 16.45 32.925 16.5C33.15 18.725 32.9125 20.8375 32.2125 22.8375C31.5125 24.8375 30.481 26.5875 29.118 28.0875C27.756 29.5875 26.1185 30.7815 24.2055 31.6695C22.2925 32.5575 20.224 33.001 18 33Z" fill="rgb(var(--data-color-black))")
+
+			h2.cookies__title Cookie policy
+		p.cookies__description 	
+			| We use cookies to improve user experience and analyze website traffic. By clicking “Accept”, you consent to the use of our cookies. For more information, read our 
+			a.cookies__description__link(href="/terms" data-page-link) Privacy Policy
+			| .
+
+		.cookies__settings__wrapper 
+			label.toggle__switch 
+				span.toggle__switch__title Essential Cookies
+				input.toggle__switch__check#cookie-essential(type="checkbox" checked)
+				span(aria-hidden="true").toggle__switch__bar
+					span.toggle__switch__handle
+			label.toggle__switch 
+				span.toggle__switch__title Analytics Cookies
+				input.toggle__switch__check#cookie-analytics(type="checkbox" checked)
+				span(aria-hidden="true").toggle__switch__bar
+					span.toggle__switch__handle
+			//- label.toggle__switch 
+			//- 	span.toggle__switch__title Advertisement Cookies
+			//- 	input.toggle__switch__check(type="checkbox")
+			//- 	span(aria-hidden="true").toggle__switch__bar
+			//- 		span.toggle__switch__handle
+
+		.cookies__buttons 
+			.cookies__button.cookies__button--accept.btn Accept
+			.cookies__button.cookies__button--leave.btn Reject

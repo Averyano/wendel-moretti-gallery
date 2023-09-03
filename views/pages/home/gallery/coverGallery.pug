@@ -1,0 +1,23 @@
+//- - var data = dataGlobal.home.gallery;
+//- - var webpSrc = methods.webpSrc;
+
+mixin coverImg(propSrc, propClass, propAlt)
+	figure.cover__item(class=propClass)
+		img.cover__image(alt=propAlt data-pre=propSrc data-pre-webp=`${methods.webpSrc(propSrc)}`)
+
+.cover__wrapper
+	.cover__row1.cover__row
+		+coverImg("@images/pexels-wendel-moretti-1741720-thumbnail.jpg", 'vertical', '1 Green Flat Hallway')
+		//- +coverImg("@images/pexels-wendel-moretti-1777479-thumbnail.jpg", 'vertical', '2 Green Flat Bedroom')
+		//- +coverImg("@images/pexels-wendel-moretti-1845162-thumbnail.jpg", 'vertical', '3 Green Flat Kitchen')
+		//- +coverImg("@images/pexels-wendel-moretti-1865735-thumbnail.jpg", 'vertical', '4 Green Flat Living')
+	.cover__row2.cover__row
+		+coverImg("@images/pexels-wendel-moretti-2941082-thumbnail.jpg", 'vertical', '5 Green Flat Living')
+		//- +coverImg("@images/pexels-wendel-moretti-3173175-thumbnail.jpg", 'vertical', '6 Green Flat Children Room')
+		//- +coverImg("@images/pexels-wendel-moretti-3220184-thumbnail.jpg", 'vertical', '7 Green Flat Children Room')
+		//- +coverImg("@images/pexels-wendel-moretti-3330210-thumbnail.jpg", 'vertical', '8 Green Flat Bathroom')
+	.cover__row3.cover__row
+		+coverImg("@images/pexels-wendel-moretti-3361044-thumbnail.jpg", 'vertical', '9 Green Flat Living')
+		//- +coverImg("@images/pexels-wendel-moretti-3361048-thumbnail.jpg", 'vertical', '10 Cozy Flat Hallway')
+		//- +coverImg("@images/pexels-wendel-moretti-3369958-thumbnail.jpg", 'vertical', '11 Cozy Flat Kitchen')
+		//- +coverImg("@images/pexels-wendel-moretti-3369961-thumbnail.jpg", 'vertical', '12 Cozy Flat Living')

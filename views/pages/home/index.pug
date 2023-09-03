@@ -1,0 +1,24 @@
+extends ../../index.pug
+
+//- block additionalHead
+//- 	base(href="/")
+
+//- 	title='Wendel Moretti'
+
+//- 	meta(name="description", content="")
+//- 	meta(name="keywords", content="")
+
+//- 	meta(property="og:type" content="website")
+//- 	meta(property="og:site_name" content='Photography')
+//- 	meta(property="og:title" content='Wendel Moretti')
+//- 	meta(property="og:description" content="")
+//- 	meta(property="og:image" content='/images/ogimage.jpg')
+
+//- 	meta(name="twitter:card" content="summary_large_image")
+//- 	meta(name="twitter:title" content='Wendel Moretti')
+//- 	meta(name="twitter:description" content="")
+//- 	meta(name="twitter:image" content='/images/ogimage.jpg')
+
+block content
+	main.content.home(data-template="home")
+		include ./cover

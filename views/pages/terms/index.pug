@@ -1,0 +1,52 @@
+extends ../../index.pug
+
+block content
+	main.content.terms(data-template="terms")
+
+		section.terms#welcome-section
+
+			.terms__wrapper
+				h1.terms__main__heading Privacy Policy for Utkina Design
+				.terms__item
+					.terms__title 1. Introduction
+					.terms__description At Utkina Design, we respect and protect the privacy of our users. This privacy policy explains how we collect and use personal information.
+
+				.terms__item
+					.terms__title 2. Data We Collect
+					.terms__description While using Utkina Design, we may collect anonymous data related to user interactions on our website. This data includes:
+					ul.terms__list
+						li Website navigation and page visits
+						li Interactions with specific elements such as buttons and links
+
+				.terms__item
+					.terms__title 3. Use of Your Information
+					.terms__description We use the collected data to enhance user experience, understand website activity, and improve our services. 
+
+				.terms__item
+					.terms__title 4. Data Retention
+					.terms__description We retain user interaction data for a limited time to ensure website functionality and to improve user experience.
+
+				.terms__item
+					.terms__title 5. Cookies
+					.terms__description We use cookies for analytics purposes, which allows us to understand user interactions on our site. You have the option to decline these cookies through your browser settings.
+
+				.terms__item
+					.terms__title 6. Rights of Users
+					.terms__description Under GDPR:
+					ul.terms__list
+						li You have the right to access your personal data.
+						li You have the right to have your data corrected or deleted.
+						li You have the right to restrict or object to our processing of your data.
+						li You have the right to data portability, meaning you can obtain and reuse your personal data for your own purposes.
+						li You have the right to withdraw consent at any time.
+
+				.terms__item
+					.terms__title 7. Contact Us
+					.terms__description If you have any questions regarding our privacy policy or the data we collect, please contact us at:
+					ul.terms__list
+						li Email: 
+							a(href="mailto:hello@utkina-design.com?subject=Design Services") hello@utkina-design.com
+						li Phone: 
+							a(href="https://api.whatsapp.com/send?phone=380631454389" target="_blank") WhatsApp
+
+		//- include ../../layout/footer

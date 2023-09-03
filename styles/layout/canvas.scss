@@ -1,0 +1,13 @@
+.webgl {
+	z-index: z('canvas');
+	position: fixed;
+	top: 0;
+	left: 0;
+	outline: none;
+
+	cursor: grab;
+
+	&:active {
+		cursor: grabbing;
+	}
+}

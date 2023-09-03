@@ -1,0 +1,136 @@
+%extrabold-128 {
+	font-weight: 800;
+	font-size: 128px;
+	letter-spacing: -4px;
+	text-transform: uppercase;
+
+	@include media('<tablet') {
+		font-size: 96px;
+		letter-spacing: -2px;
+	}
+
+	@include media('<phone') {
+		font-size: 72px;
+		letter-spacing: -2px;
+	}
+}
+
+%bold-62 {
+	font-weight: 700;
+	font-size: 62px;
+	line-height: 48px;
+	letter-spacing: -2px;
+	text-transform: uppercase;
+
+	@include media('<laptop') {
+		font-size: 48px;
+	}
+}
+
+%bold-48 {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+	letter-spacing: -2px;
+	text-transform: uppercase;
+
+	& strong {
+		font-style: italic;
+	}
+
+	@include media('<laptop') {
+		font-size: 24px;
+		line-height: 24px;
+	}
+}
+
+%paragraph-24 {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 45.5px;
+
+	max-width: 700px;
+	margin-bottom: 45.5px;
+
+	@include media('<laptop') {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+%paragraph-16 {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22.5px;
+
+	max-width: 700px;
+	margin-bottom: 22.5px;
+
+	@include media('<laptop') {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+%paragraph-20 {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 32px;
+
+	max-width: 700px;
+	margin-bottom: 32px;
+
+	@include media('<laptop') {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 24px;
+	}
+}
+%paragraph-faded {
+	@extend %paragraph-24;
+	color: #d1cfcd;
+}
+
+%paragraph-faded-small {
+	color: #d1cfcd;
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22.5px;
+
+	max-width: 700px;
+	margin-bottom: 22.5px;
+
+	@include media('<laptop') {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+%light-16 {
+	@extend %paragraph-16;
+	font-weight: 300;
+	color: #d1cfcd;
+
+	@include media('<laptop') {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 22px;
+	}
+}
+
+%light-12 {
+	font-weight: 400;
+	font-size: 12px;
+}
+
+%black-256 {
+	font-weight: 900;
+	// letter-spacing: -0.2rem;
+	font-size: 256px;
+	text-transform: uppercase;
+}

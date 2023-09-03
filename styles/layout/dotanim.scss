@@ -1,0 +1,24 @@
+.dotanim--1 {
+	animation: dotFade 4s infinite;
+	animation-delay: 1s;
+}
+.dotanim--2 {
+	animation: dotFade 4s infinite;
+	animation-delay: 2s;
+}
+.dotanim--3 {
+	animation: dotFade 4s infinite;
+	animation-delay: 3s;
+}
+
+@keyframes dotFade {
+	0% {
+		opacity: 0%;
+	}
+	51% {
+		opacity: 100%;
+	}
+	100% {
+		opacity: 0%;
+	}
+}

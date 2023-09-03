@@ -1,0 +1,90 @@
+.circle__button {
+	@extend %center;
+
+	position: absolute;
+
+	width: 246px;
+	height: 246px;
+
+	border-radius: 50%;
+	user-select: none;
+
+	z-index: z('content-front');
+	cursor: pointer;
+
+	@include media('<desktop') {
+		width: 218px;
+		height: 218px;
+	}
+
+	@include media('>laptop') {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@include media('<laptop') {
+		right: 5vw;
+		bottom: 7vw;
+		width: 192px;
+		height: 192px;
+		transform: translate(0, 0);
+	}
+
+	@include media('<phone') {
+		// display: none;
+		// width: 192px;
+		// height: 192px;
+		// right: 4vh;
+		// bottom: 14vh;
+		bottom: calc(5vh + 32px);
+		right: 32px;
+		// transform: translate(0, 0);
+	}
+}
+
+.circle__wrapper {
+	@extend %center;
+	height: 100%;
+	width: 100%;
+	background: rgb(var(--data-color-black));
+	border-radius: inherit;
+
+	& svg {
+		@include media('<desktop') {
+			width: 72px;
+			height: 72px;
+		}
+
+		@include media('<laptop') {
+			width: 64px;
+			height: 64px;
+		}
+	}
+}
+
+.circle__button__text {
+	@extend %link--hidden;
+	position: absolute;
+	left: 50%;
+	bottom: 24%;
+	transform: translate(-50%, 50%);
+	font-size: 18px;
+	height: 1.5rem;
+
+	@include media('<laptop') {
+		font-size: 14px;
+	}
+
+	@include media('<phone') {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.circle__button__text--inner {
+}
+.circle__button__text.active:after {
+	transform: scaleX(1);
+	transform-origin: left center;
+}

@@ -1,0 +1,13 @@
+extends ../../index.pug
+
+block content
+	main.content.notfound(data-template="404")
+		section.notfound__wrapper
+			h2.notfound__title 404
+			h3.notfound__subtitle
+				| I'm sorry, this page doesn't exist.
+				br
+				| Let's take you back to the homepage.
+			a.btn(href="/home" data-page-link)
+				span.btn__text
+					.btn__text--inner Back to Site

@@ -1,0 +1,17 @@
+@media (hover: hover) {
+	::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 8px;
+		background-color: rgba(var(--data-color-black), 0.3);
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		border-radius: 8px;
+		// background-color: rgba(var(--data-color-black), 0.05);
+	}
+}
