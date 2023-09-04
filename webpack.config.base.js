@@ -25,9 +25,9 @@ function addForCopy(dir, customFolder) {
 	return { from: dir, to: './' + folder };
 }
 const assetsToCopy = [
-	addForCopy(path.join(dirShared, 'images')), // folder: /images
-	addForCopy(path.join(dirShared, 'pdf')), // folder: /pdf
-	addForCopy(path.join(dirShared, 'models')), // folder: /models
+	addForCopy(path.join(dirShared, 'images'), 'images'), // folder: /images
+	addForCopy(path.join(dirShared, 'pdf'), 'pdf'), // folder: /pdf
+	addForCopy(path.join(dirShared, 'models'), 'models'), // folder: /models
 
 	addForCopy(path.join(dirShared, 'other'), false), // folder: /
 	addForCopy(path.join(dirShared, 'images', 'icons'), 'icons'), // folder: /icons
@@ -48,7 +48,7 @@ const pagePlugins = getPagesHtmlPlugins({
 });
 
 // const IS_DEVELOPMENT = process.env.NODE_ENV === "development";
-const baseConfig = (isDevelopment) => {
+const baseConfig = (isDevelopment, isWebp = false) => {
 	/**
 	 * Plugins
 	 */
@@ -56,6 +56,7 @@ const baseConfig = (isDevelopment) => {
 	const plugins = [
 		new webpack.DefinePlugin({
 			IS_DEVELOPMENT: isDevelopment,
+			IS_WEBP: isWebp,
 		}),
 		new CopyWebpackPlugin({
 			patterns: assetsToCopy,
@@ -69,8 +70,7 @@ const baseConfig = (isDevelopment) => {
 		...pagePlugins,
 	];
 
-	// Compress for PRODUCTION
-	if (!isDevelopment) {
+	if (isWebp) {
 		plugins.push(
 			new ImageminWebpWebpackPlugin({
 				config: [
@@ -81,11 +81,23 @@ const baseConfig = (isDevelopment) => {
 						},
 					},
 				],
+				externalImages: {
+					context: 'src', // Important! This tells the plugin where to "base" the paths at
+					sources: path.join(__dirname, 'shared/images/**/*.{jpg,png}'),
+					destination: path.join(__dirname, 'public/images'),
+					fileName: '[path][name].[ext]', // (filePath) => filePath.replace('jpg', 'webp') is also possible
+				},
 				overrideExtension: true,
 				detailedLogs: false,
 				silent: false,
 				strict: true,
-			}),
+			})
+		);
+	}
+
+	// Compress for PRODUCTION
+	if (!isDevelopment) {
+		plugins.push(
 			new CompressionPlugin({
 				algorithm: 'gzip',
 				test: /\.(js|css|html|svg)$/,
@@ -221,29 +233,42 @@ const baseConfig = (isDevelopment) => {
 							},
 						},
 						{
-							loader: 'html-loader',
+							loader: path.resolve(
+								__dirname,
+								'./webpack/loaders/path-resolver.js'
+							),
 							options: {
-								sources: {
-									list: [
-										{
-											tag: 'img',
-											attribute: 'src',
-											type: 'src',
-										},
-										{
-											tag: 'img',
-											attribute: 'data-pre',
-											type: 'src',
-										},
-										{
-											tag: 'img',
-											attribute: 'data-pre-webp',
-											type: 'src',
-										},
-									],
-								},
+								targetDirectory: path.resolve(__dirname, 'shared/other'),
+								placeholder: '@other',
 							},
 						},
+						// {
+						// 	loader: 'html-loader',
+						// 	options: {
+						// 		sources: {
+						// 			list: [
+						// 				{
+						// 					tag: 'img',
+						// 					attribute: 'src',
+						// 					type: 'src',
+						// 				},
+						// 				{
+						// 					tag: 'img',
+						// 					attribute: 'data-pre',
+						// 					type: 'src',
+						// 				},
+						// 				{
+						// 					tag: 'img',
+						// 					attribute: 'data-pre-webp',
+						// 					type: 'src',
+						// 				},
+						// 			],
+						// 		},
+						// 	},
+						// },
+						// {
+						// 	loader: 'pug-loader',
+						// },
 						{
 							loader: '@webdiscus/pug-loader',
 							options: {

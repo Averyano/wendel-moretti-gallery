@@ -9,6 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const PugPlugin = require('pug-plugin');
 
 module.exports.getPagesHtmlPlugins = ({
 	indexFolder,

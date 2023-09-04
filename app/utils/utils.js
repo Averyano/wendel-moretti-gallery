@@ -61,7 +61,7 @@ const insertAfter = (referenceNode, newNode) => {
 
 const checkWebpSupport = async () => {
 	return new Promise((resolve) => {
-		if (IS_DEVELOPMENT) return resolve(false);
+		if (!IS_WEBP) return resolve(false);
 
 		const webp = new Image();
 		webp.onload = webp.onerror = function () {
