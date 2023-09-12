@@ -152,7 +152,7 @@ class App {
 		this.pageLength = this.mainDiv.getBoundingClientRect().height;
 		this.isCreated = true;
 
-		this.cookieBanner = new CookieBanner();
+		// this.cookieBanner = new CookieBanner();
 		this.footer = new Footer();
 	}
 

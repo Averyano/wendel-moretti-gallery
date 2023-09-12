@@ -12,7 +12,7 @@ export default class GalleryItem {
 		this.bounds = obj.bounds;
 		this.extraY = 0;
 		this.aspect = aspect;
-		console.log(this.aspect);
+
 		this.original = {
 			position: null, // vec3
 			uResolution: null, // vec2
@@ -58,7 +58,6 @@ export default class GalleryItem {
 			fragmentShader: imageFragment,
 			transparent: true,
 		});
-		console.log(this.sizes.width, this.sizes.height);
 
 		const geometry = new THREE.PlaneGeometry(1, 1);
 
@@ -71,13 +70,6 @@ export default class GalleryItem {
 
 		// material.uniforms.uImageRes.value.x = obj.bounds.width / obj.bounds.height; // y is 1
 
-		console.log(
-			material.uniforms.uImageRes.value.x,
-			material.uniforms.uImageRes.value.y
-		);
-		console.log(aspect.x, aspect.y);
-
-		console.log(this.mesh.scale);
 		// Position
 		this.mesh.position.set(
 			x - this.sizes.width / 2,

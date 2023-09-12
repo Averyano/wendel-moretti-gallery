@@ -62,6 +62,8 @@ export default class Gallery extends Component {
 			this.padding = 32;
 		} else if (this.isDesktop) {
 			this.padding = 64;
+		} else {
+			this.padding = 64;
 		}
 
 		this.active = false;

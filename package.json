@@ -1,7 +1,7 @@
 {
-	"name": "avery-template",
+	"name": "wendel-moretti infinite gallery",
 	"version": "0.0.1",
-	"description": "@averyjs",
+	"description": "demo @averyjs",
 	"main": "app.js",
 	"scripts": {
 		"build": "webpack --progress --mode production && node ./generate-sitemap.js https://avery-js.web.app",
