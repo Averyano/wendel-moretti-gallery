@@ -1,7 +1,7 @@
 {
-	"name": "Avery.js starter config",
-	"short_name": "Avery.js",
-	"description": "Front-end environment for building JavaScript applications.",
+	"name": "wendel-moretti-gallery",
+	"short_name": "wendel-moretti-gallery",
+	"description": "Infinite scrolling gallery with a simple and clean design.",
 	"lang": "en",
 	"dir": "ltr",
 	"start_url": "/",

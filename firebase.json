@@ -8,16 +8,8 @@
 				"destination": "/index.html"
 			},
 			{
-				"source": "/home",
-				"destination": "/index.html"
-			},
-			{
-				"source": "/404",
-				"destination": "/notfound.html"
-			},
-			{
 				"source": "**",
-				"destination": "/notfound.html"
+				"destination": "/index.html"
 			}
 		],
 		"headers": [
