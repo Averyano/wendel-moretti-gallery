@@ -2,7 +2,7 @@
 
 Made using Three.js, GSAP and GLSL.
 
-[Live demo](soon)
+[Live demo](https://wendel-moretti.web.app/)
 
 ## How to use
 
